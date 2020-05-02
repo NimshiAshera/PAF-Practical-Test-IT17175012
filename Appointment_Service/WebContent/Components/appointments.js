@@ -88,7 +88,7 @@ function validateAppointmentForm()
 	{
 		return "Insert a date for the appointment.";
 	} 
-
+				
 	// Ward No------------------------
 	if ($("#WardNo").val().trim() == "")
 	{

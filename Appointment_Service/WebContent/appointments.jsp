@@ -71,6 +71,14 @@
 <script src="Components/jquery-3.2.1.min.js"></script>
 <script src="Components/appointments.js"></script>
 
+<style type="text/css">
+
+	body {
+  		background-color: #e0e0eb ;
+	}
+
+</style>
+
 </head>
 <body>
 
@@ -78,14 +86,14 @@
 		<div class="row">
 			<div class="col-8">
 
- 			<h1 class="m-3" style="text-align:center">Appointment Grid</h1>
+ 			<img src="Images/logo.jpg" style="width:200px; height:200px; "><h1 class="m-3" style="text-align:center">Appointment List</h1>
  			
  			<br>
 
  			<form id="formAppointment" name="formAppointment" method="post" action="appointments.jsp">
  			
  			<label>Doctor ID:</label>
-			<input id="doctor_id" name="doctor_id" type="text" class="form-control form-control-sm">
+			<input id="doctor_id" name="doctor_id" type="number" min="1" max="10" class="form-control form-control-sm">
 			
 			<br> 
 
@@ -107,7 +115,7 @@
 			<br> 
 
 			<label>Hospital ID:</label>
-			<input id="hospital_id" name="hospital_id" type="text" class="form-control form-control-sm">
+			<input id="hospital_id" name="hospital_id" type="number" min="1" max="6" class="form-control form-control-sm">
 			
 			<br> 
 
