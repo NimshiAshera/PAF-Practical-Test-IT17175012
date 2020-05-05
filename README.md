@@ -1,3 +1,6 @@
+create database new;
+
+use new;
 
 create table appointment( 
 	ref_id int auto_increment primary key, 
