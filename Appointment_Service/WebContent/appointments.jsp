@@ -4,59 +4,9 @@
     
     
     			<%
-
 					 //Initialize
 					 session.setAttribute("statusMsg","");
-					 System.out.println("Trying to process...");
-
-					 //Save---------------------------------
-					 if (request.getParameter("doctor_id") != null)
-					 {
-					  	Appointment appointmentObj = new Appointment();
-					  	
-					  	String stsMsg = "";
-					 	
-					  	//Insert--------------------------
-					 	if (request.getParameter("hidAppointmentIDSave") == "")
-					  	{
-					  
-					 		stsMsg = appointmentObj.insertAppointment(
-								request.getParameter("doctor_id"),
-					 			request.getParameter("doctor_name"),
-								request.getParameter("hospital_id"),
-					 			request.getParameter("name"),
-								request.getParameter("appointment_time"),
-					  			request.getParameter("appointment_date"),
-					  			request.getParameter("WardNo"));
-					  	}
-					 
-					 	else//Update----------------------
-					  	{
-					  		stsMsg = appointmentObj.updateAppointment(
-								request.getParameter("hidAppointmentIDSave"),
-					  			request.getParameter("doctor_id"),
-					 			request.getParameter("doctor_name"),
-								request.getParameter("hospital_id"),
-					 			request.getParameter("name"),
-								request.getParameter("appointment_time"),
-					  			request.getParameter("appointment_date"),
-					  			request.getParameter("WardNo"));
-					  	}
-					  
-					  	session.setAttribute("statusMsg", stsMsg);
-					 }
-					 
-					//Delete-----------------------------
-					if (request.getParameter("hidAppointmentIDDelete") != null)
-					{
-					  	Appointment appointmentObj = new Appointment();
-					  	
-					  	String stsMsg =
-					  
-					  	appointmentObj.deleteAppointment(request.getParameter("hidAppointmentIDDelete"));
-					  	session.setAttribute("statusMsg", stsMsg);
-					 }
-
+					 System.out.println("Trying to process...");				
 				%>
     
    
@@ -76,7 +26,7 @@
 	body {
   		background-color: #e0e0eb ;
 	}
-
+	
 </style>
 
 </head>
